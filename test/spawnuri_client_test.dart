@@ -1,8 +1,8 @@
-import 'package:spawnuri_client/spawnuri_client.dart';
+import 'package:spawnuri_client/calculate.dart';
 import 'package:test/test.dart';
 
 void main() {
   test('calculate', () {
-    expect(calculate(), 42);
+    expect(calculate(6, 7), 42);
   });
 }

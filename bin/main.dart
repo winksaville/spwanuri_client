@@ -1,5 +1,8 @@
-import 'package:spawnuri_client/spawnuri_client.dart' as spawnuri_client;
+import 'package:spawnuri_client/calculate.dart';
 
 void main(List<String> arguments) {
-  print('Hello world: ${spawnuri_client.calculate()}!');
+  final int v1 = int.parse(arguments[0] ?? '6');
+  final int v2 = int.parse(arguments[1] ?? '7');
+
+  print('Hello world: ${calculate(v1, v2)}!');
 }
