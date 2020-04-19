@@ -1,7 +1,4 @@
-import 'dart:async';
-import 'dart:io';
 import 'dart:isolate';
-import 'package:async/async.dart';
 
 import 'package:spawnuri_client/calculate.dart';
 import 'package:test/test.dart';
@@ -21,13 +18,12 @@ void main() {
 
   test('Test spawnUri', () async {
     final ReceivePort receivePort = ReceivePort();
-    receivePort.first.then<void>(expectAsync1<dynamic, void>((dynamic msg){
+    receivePort.first.then<void>(expectAsync1<dynamic, void>((dynamic msg) {
       expect(msg is int, isTrue);
       expect(msg, expected);
     }));
 
-    final Isolate isolate = await Isolate.spawnUri(
-      Uri.parse('../bin/main.dart'), <String>[v1, v2], receivePort.sendPort);
-    isolate.kill();
+    final Uri uri = Uri.parse('../bin/main.dart');
+    Isolate.spawnUri(uri, <String>[v1, v2], receivePort.sendPort);
   });
 }
