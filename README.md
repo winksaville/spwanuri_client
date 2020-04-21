@@ -31,7 +31,21 @@ Hello world: 46!
 ```
 
 ## Test
+
+Run the tests directly or us `pub run test`
 ```
+wink@wink-desktop:~/prgs/dart/spawnuri_client (master)
+$ dart test/*
+00:00 +0: calculate 6 * 7
+
+00:00 +1: calculate -1 * 7
+
+00:00 +2: All tests passed!
+
+wink@wink-desktop:~/prgs/dart/spawnuri_client (master)
+$ pub run test
+00:02 +3: All tests passed!                                                                   
+wink@wink-desktop:~/prgs/dart/spawnuri_client (master)
 ```
 
 ## Clean
