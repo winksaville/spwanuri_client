@@ -1,3 +1,5 @@
+Moved to: https://github.com/winksaville/spawnuri_client
+
 # spwawnuri-example
 
 The goal is to create a command-line application that will
